@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>내용 복습</title>
+</head>
+<body>
+  <form action="" method="get">
+    <label for="Cname">고객명 : </label>
+    <input type="text" id="Cname" name="Cname" placeholder="이름을 입력하세요">
+    <br><br>
+
+    <label for="Cnum">전화번호 : </label>
+    <input type="number" id="Cnum" name="Cnum" placeholder="전화번호를 입력하세요">
+    <br><br>
+
+    <label for="Cmail">E-mail : </label>
+    <input type="email" id="Cmail" name="Cmail" placeholder="이메일을 입력하세요">
+    <br><br>
+
+    <label for="Pizza">피자선택 :</label>
+    <select name="pizza" id="pizza">
+      <option value="Selectp">피자를 선택하세요</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select>
+
+    <fieldset>
+      <legend>피자 사이즈</legend>
+      <ul>
+          <label><input type="radio" name="size" value="small">Small</label>
+          <br><br>
+          <label><input type="radio" name="size" value="medium">Medium</label>
+          <br><br>
+          <label><input type="radio" name="size" value="large">Large</label>
+        
+      </ul>
+    </fieldset>
+    <fieldset>
+<legend>토핑 선택</legend>
+      <ul>
+          <label><input type="checkbox" name="toping" value="t1">베이컨</label>
+          <br><br>
+          <label><input type="checkbox" name="toping" value="t2">치즈</label>
+          <br><br>
+          <label><input type="checkbox" name="toping" value="t3">양파</label>
+          <br><br>
+          <label><input type="checkbox" name="toping" value="t4">버섯</label>
+        
+      </ul>
+    </fieldset>
+    <br>
+
+<label for="time">희망배송시간</label>
+<input type="time" id="time" name="time">
+<br><br>
+<label for="Message"> 배송시 요청사항: </label>
+    <textarea
+    id="Message"
+    name="Message"
+    rows="3"
+    cols="15"
+    placeholder="요청사항을 입력하세요">
+    </textarea>
+    <br><br>
+    <input type="submit" value="주문하기">
+  </form>
+</body>
+</html>
