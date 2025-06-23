@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>점수 계산기</title>
+    <style>
+      /* label 요소를 flexbox로 정렬하고 스타일링 */
+      label {
+        display: flex; /* 내부 요소 수평 정렬 */
+        position: relative; /* 위치 기준 */
+        background-color: lightblue; /* 배경 색상 */
+        padding: 10px; /* 안쪽 여백 */
+        margin: 10px; /* 바깥 여백 */
+        width: 100px; /* 너비 고정 */
+        max-height: 100px; /* 최대 높이 제한 */
+        justify-content: center; /* 가로 가운데 정렬 */
+        align-items: center; /* 세로 가운데 정렬 */
+        border: 1px solid black; /* 검정 테두리 */
+      }
+
+      /* input 입력창 스타일 지정 */
+      input {
+        max-width: 50px; /* 입력창 최대 너비 */
+        border: 2px solid red; /* 빨간 테두리 */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>과목 점수 입력</h2>
+
+    <label>국어: <input type="number" id="korean" /></label>
+    <label>영어: <input type="number" id="english" /></label>
+    <label>수학: <input type="number" id="math" /></label>
+    <label>과학: <input type="number" id="science" /></label>
+
+    <button onclick="calculate()">계산하기</button>
+
+    <h3>결과</h3>
+    <p id="total"></p>
+    <p id="average"></p>
+    <p id="grade"></p>
+
+    <script>
+      function calculate() {
+        // 각 과목 점수 가져오기 (빈 값이면 0 처리)
+        const korean = parseFloat(document.getElementById("korean").value) || 0;
+        const english = parseFloat(document.getElementById("english").value) || 0;
+        const math = parseFloat(document.getElementById("math").value) || 0;
+        const science = parseFloat(document.getElementById("science").value) || 0;
+
+        // 총점 계산
+        const total = korean + english + math + science;
+
+        // 평균 계산 (소수점 2자리까지 표시)
+        const average = total / 4;
+
+        // 등급 결정 조건문
+        let grade = "";
+        if (average >= 90) grade = "A";
+        else if (average >= 80) grade = "B";
+        else if (average >= 70) grade = "C";
+        else if (average >= 60) grade = "D";
+        else grade = "F";
+
+        // 결과 텍스트로 DOM에 출력
+        document.getElementById("total").textContent = `총점: ${total}`;
+        document.getElementById("average").textContent = `평균: ${average.toFixed(2)}`;
+        document.getElementById("grade").textContent = `등급: ${grade}`;
+      }
+    </script>
+  </body>
+</html>
