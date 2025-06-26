@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>계산기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculator">
+    <div id="display" class="display">0</div>
+    <div id="buttons" class="buttons">
+      <button id="clear">C</button>
+      <button id="backspace">←</button>
+      <button id="percent">%</button>
+      <button id="divide">/</button>
+
+      <button id="seven">7</button>
+      <button id="eight">8</button>
+      <button id="nine">9</button>
+      <button id="multiply">*</button>
+
+      <button id="four">4</button>
+      <button id="five">5</button>
+      <button id="six">6</button>
+      <button id="subtract">-</button>
+
+      <button id="one">1</button>
+      <button id="two">2</button>
+      <button id="three">3</button>
+      <button id="add">+</button>
+
+      <button id="zero">0</button>
+      <button id="dot">.</button>
+      <button id="equal"class="equal">=</button>
+    </div>
+  </div>
+ <script>
+  let display = document.getElementById("display");
+
+  // 버튼 요소 가져오기
+  let clear = document.getElementById("clear");
+  let backspace = document.getElementById("backspace");
+  let percent = document.getElementById("percent");
+  let divide = document.getElementById("divide");
+  let multiply = document.getElementById("multiply");
+  let subtract = document.getElementById("subtract");
+  let add = document.getElementById("add");
+  let dot = document.getElementById("dot");
+  let equal = document.getElementById("equal");
+
+  // 숫자 버튼들도 가져오기
+  let zero = document.getElementById("zero");
+  let one = document.getElementById("one");
+  let two = document.getElementById("two");
+  let three = document.getElementById("three");
+  let four = document.getElementById("four");
+  let five = document.getElementById("five");
+  let six = document.getElementById("six");
+  let seven = document.getElementById("seven");
+  let eight = document.getElementById("eight");
+  let nine = document.getElementById("nine");
+
+  // 값 추가 함수 (초기값 0 제거 처리 포함)
+  function appendToDisplay(value) {
+    if (display.textContent === "0") {
+      display.textContent = value;
+    } else {
+      display.textContent += value;
+    }
+  }
+
+  // 버튼 클릭 이벤트 처리
+  let buttons = document.getElementById("buttons");
+  buttons.addEventListener("click", (e) => {
+    let target = e.target;
+    let value = target.innerText;
+
+    switch (target.id) {
+      case "equal":
+        try {
+          display.textContent = eval(display.textContent);
+        } catch {
+          display.textContent = "Error";
+        }
+        break;
+
+      case "clear":
+        display.textContent = "0";
+        break;
+
+      case "backspace":
+        if (display.textContent.length === 1) {
+          display.textContent = "0";
+        } else {
+          display.textContent = display.textContent.slice(0, -1);
+        }
+        break;
+
+      case "percent":
+        try {
+          let result = eval(display.textContent) / 100;
+          display.textContent = result;
+        } catch {
+          display.textContent = "Error";
+        }
+        break;
+
+      case "dot":
+        // 마지막 숫자 블록에 점이 없을 때만 추가
+        let parts = display.textContent.split(/[\+\-\*\/]/);
+        let last = parts[parts.length - 1];
+        if (!last.includes(".")) {
+          appendToDisplay(".");
+        }
+        break;
+
+      default:
+        if (target.tagName === "BUTTON") {
+          appendToDisplay(value);
+        }
+    }
+  });
+</script>
+
+</body>
+</html>
