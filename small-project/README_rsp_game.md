@@ -85,5 +85,5 @@ computerImg.src = `img/${computerPick.toLowerCase()}.png`;
 
 ## 🙌 만든 사람
 
-- 개발자: [당신의 이름 또는 GitHub ID]
+- 개발자: [jemanHan]
 - 프로젝트 목적: 웹 기초 학습용 미니 프로젝트
