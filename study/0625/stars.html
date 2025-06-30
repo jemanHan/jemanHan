@@ -113,14 +113,47 @@
 // console.log(star);
 //================================================================
 //가운데 비운 다이아
-let n = Number(prompt("다이아  높이 입력"));
-let star = "";
-for (let i = 1; i <= n; i++) {
-    if(i > n/2)
-  star += " ".}
-else{ repeat(n - i) + "*".repeat(2 * i - 1) + "\n";
+//
+
+
+
+
+
+
+let n = parseInt(prompt("홀수 정수를 입력하세요"));  // 사용자 입력
+
+// 입력값이 홀수인지 확인
+if (n % 2 === 0 || isNaN(n)) {
+  console.log("홀수 정수를 입력해야 합니다.");
+} else {
+  let mid = Math.floor(n / 2);
+
+  // 윗부분 (가운데 포함)
+  for (let i = 0; i <= mid; i++) {
+    let row = "";
+
+    for (let j = 0; j < mid - i; j++) row += " ";
+    for (let j = 0; j < i * 2 + 1; j++) {
+      if (j === 0 || j === i * 2) row += "*";
+      else row += " ";
+    }
+
+    console.log(row);
+  }
+
+  // 아랫부분
+  for (let i = mid - 1; i >= 0; i--) {
+    let row = "";
+
+    for (let j = 0; j < mid - i; j++) row += " ";
+    for (let j = 0; j < i * 2 + 1; j++) {
+      if (j === 0 || j === i * 2) row += "*";
+      else row += " ";
+    }
+
+    console.log(row);
+  }
 }
-console.log(star);
 
 
    </script>
