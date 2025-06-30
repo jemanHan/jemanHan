@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <title> 봄 객체 </title>
+    <style>
+        
+    </style>
+  </head>
+  <body>
+<h1>BOM 객체</h1>
+<hr>
+
+    <script>
+//     function openPopup() {
+//         window.open("https://www.naver.com", "popup", "width = 300 ,height = 300")
+//     }
+
+// setTimeout(openPopup, 3000);
+
+// // setInterval(openPopup, 3000);
+
+
+//====================================================
+
+// //navigator
+// console.log(navigator.userAgent)
+// console.log(navigator.language)
+// console.log(navigator.platform)
+// console.log(navigator.appName)
+// console.log(navigator.appVersion)
+// console.log(navigator.appCodeName)
+// console.log(navigator.product)
+// console.log(navigator.maxTouchPoints)
+
+// //Location
+// console.log(location.href)
+// console.log(location)
+
+// // location.href = "https://www.naver.com"
+//=====================================================
+
+// if (confirm("구글?")) {
+//     location.href = "https://www.google.com"
+// } else {
+//     location.href = "https://www.naver.com"
+// }
+// //================================================================
+// console.log("화면 너비:", screen.width)
+// console.log("화면 너비:", screen.height)
+// console.log(screen)
+//==========================================
+// history.forward
+// history.back
+// history.go(숫자)
+// history.length
+// history.state
+    </script>
+
+    <button onclick="newTab()"> 새 창</button>
+    </button=>
+
+    <hr>
+<h3>뒤로, 앞으로 버튼 (페이지 history 있어야함)</h3>
+    <button onclick="back()">뒤로</button>
+    <button onclick="foward()">앞으로</button>
+    <script>
+
+        function newTab(){
+            window.open("https://www.naver.com", "popup", "width = 600, height = 400")
+        }
+
+        function back(){
+            history.go(-1)
+        }
+
+        function foward(){
+            history.go(1)
+        }
+
+
+        //=====================================================
+        // /1. window 객체
+        window.alert("ㅎㅇ")
+        console.log("창 너비:", window.innerWidth);
+        console.log("창 높이:", window.innerHeight);
+
+        setTimeout(() => {
+  alert("3초 후 실행됨!");
+}, 3000);
+
+// /navigator객체
+
+console.log("브라우저 이름:", navigator.appName);
+console.log("사용자 에이전트:", navigator.userAgent);
+console.log("온라인 상태:", navigator.onLine);
+console.log("사용 언어:", navigator.language);
+
+console.log("전체 URL:", location.href);
+console.log("호스트:", location.hostname);
+console.log("경로:", location.pathname);
+
+console.log("방문한 페이지 수:", history.length);
+
+const lang = navigator.language;
+
+if (lang.startsWith("ko")) {
+  alert("안녕하세요!");
+} else if (lang.startsWith("en")) {
+  alert("Hello!");
+} else {
+  alert("Welcome!");
+}
+
+// location.href = "https://www.google.com";  주소로 이동
+// location.reload(); 새로고침
+
+//=======================
+// function autoMovePage(){
+//     setTimeout(function(){
+//         location.href = "https://www.google.com"
+//     }, 3000)
+// }
+// autoMovePage();
+//========================
+
+
+    </script>
+  </body>
+</html>
