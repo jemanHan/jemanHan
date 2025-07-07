@@ -16,12 +16,15 @@
 class Calculator {
     // 👉 오버로드 시그니처 (선언만)
     add(a: number, b: number): void;
+    add(a: number, b:number, c:number):void;
     add(a: string, b: string): void;
 
     // 👉 실제 구현 (하나만 작성)
     add(a: any, b: any): void {
         console.log(a + b);
     }
+
+    
 }
 
 // 사용 예시
