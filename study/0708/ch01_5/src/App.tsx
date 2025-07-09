@@ -5,7 +5,7 @@ import * as D from './data'
 import { Component } from 'react';
 import ClassComponent from './ClassComponent';
 import ArrowComponent  from './ArrowComponent';
-import Onclick from './pages/onClick';
+import Onclick from './pages/OnClick';
 
 export default function App() {
   return (
