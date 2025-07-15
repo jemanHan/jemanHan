@@ -1,5 +1,28 @@
 {
-    "cSpell.words": [
-        "macbook"
-    ]
+  "editor.tabCompletion": "on",
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "intellicode.completionsEnabled": true,
+  "editorconfig.enable": true,
+  "cSpell.words": [
+    "macbook"
+  ]
 }
