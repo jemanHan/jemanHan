@@ -1,6 +1,7 @@
 # 🧩 Avatar & Div Position 실습 정리
 
 ## 📁 구성 파일 목록
+
 - `App.tsx`: 전체 페이지의 컴포넌트 호출 진입점
 - `DivTest.tsx`: 기본 `Div` 컴포넌트 렌더링 테스트
 - `AvatarTest.tsx`: 여러 개의 아바타 컴포넌트 수평 나열 테스트
@@ -20,7 +21,7 @@ export default function App() {
       <DivTest />
       <AvatarTest />
     </main>
-  )
+  );
 }
 ```
 
@@ -49,7 +50,7 @@ export const Div: FC<DivProps> = ({ width, height, style, src, className, ... })
 
 ---
 
-## 🧍 Avatar 컴포넌트 구조 (`Avatar.tsx`)
+<!-- ## 🧍 Avatar 컴포넌트 구조 (`Avatar.tsx`)
 
 ```tsx
 export const Avatar: FC<AvatarProps> = ({ src, size = '4rem', ... }) => {{
@@ -57,7 +58,7 @@ export const Avatar: FC<AvatarProps> = ({ src, size = '4rem', ... }) => {{
     <Div src={src} width={size} height={size} className="rounded-full bg-cover bg-gray-300" />
   )
 }}
-```
+``` -->
 
 - 💡 `Avatar`는 내부적으로 `Div`를 활용함
 - `rounded-full`: 동그란 이미지 형태
@@ -68,9 +69,12 @@ export const Avatar: FC<AvatarProps> = ({ src, size = '4rem', ... }) => {{
 ## 👥 AvatarTest.tsx 요약
 
 ```tsx
-const avatars = D.range(0, 8).map(index => (
-  <Avatar src={D.randomAvatar()} className="inline-block -ml-6 border-4 border-white" />
-))
+const avatars = D.range(0, 8).map((index) => (
+  <Avatar
+    src={D.randomAvatar()}
+    className="inline-block -ml-6 border-4 border-white"
+  />
+));
 ```
 
 - `range(0, 8)`로 8개 아바타 생성
@@ -98,9 +102,9 @@ const avatars = D.range(0, 8).map(index => (
 
 ## ✅ 핵심 정리
 
-| 개념 | 설명 |
-|------|------|
-| `Div` | 스타일 props를 활용한 커스텀 div |
-| `Avatar` | 원형 이미지 형태의 사용자 컴포넌트 |
+| 개념           | 설명                                         |
+| -------------- | -------------------------------------------- |
+| `Div`          | 스타일 props를 활용한 커스텀 div             |
+| `Avatar`       | 원형 이미지 형태의 사용자 컴포넌트           |
 | `PositionTest` | `relative`와 `absolute`로 자유 레이아웃 구현 |
-| `App` | 각 테스트 컴포넌트를 통합하는 진입 컴포넌트 |
+| `App`          | 각 테스트 컴포넌트를 통합하는 진입 컴포넌트  |
