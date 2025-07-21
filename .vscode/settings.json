@@ -1,6 +1,6 @@
 {
+  // 🔹 코드 자동완성 및 제안
   "editor.tabCompletion": "on",
-  "editor.formatOnSave": true,
   "editor.suggestSelection": "first",
   "editor.quickSuggestions": {
     "other": true,
@@ -11,17 +11,52 @@
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
+
+  // 🔹 저장 시 자동 포맷 + ESLint 고침
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll": "explicit"
   },
+
+  // 🔹 Prettier를 기본 포맷터로 지정
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // 🔹 언어별 포맷터 지정
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // 🔹 ESLint 사용 언어
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact"
   ],
-  "intellicode.completionsEnabled": true,
+
+  // 🔹 Tailwind 정렬 및 Prettier 플러그인 설정
+  "headwind.runOnSave": true,
+  "prettier.plugins": ["prettier-plugin-tailwindcss"],
+
+  // 🔹 에러 시각화 (ErrorLens)
+  "errorLens.enabled": true,
+  "errorLens.fontSize": "12px",
+  "errorLens.gutterIconsEnabled": true,
+
+  // 🔹 기타 추천 설정
+  "files.autoSave": "onWindowChange",
+  "terminal.integrated.fontSize": 14,
+  "explorer.confirmDelete": false,
+
+  // 🔹 기타 확장 관련 설정
   "editorconfig.enable": true,
+  "intellicode.completionsEnabled": true,
   "cSpell.words": [
     "macbook"
   ]

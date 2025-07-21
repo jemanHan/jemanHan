@@ -1,0 +1,28 @@
+import React, { useCallback, useState } from "react";
+
+const Child = React.memo(({onClick}:{onClick: () => void}) => {
+    console.log("자식 컴포넌트 렌더링")
+    return(
+        <div>
+<button className="p-4 m-4 bg-blue-300" onClick={onClick}>자식 버튼 클릭</button>
+        </div>
+    )
+})
+
+export default function useCallbackExample(){
+    const [count, setCount] = useState(0);
+    const [other, setOther] = useState(false);
+
+    const handleClick = useCallback(() => {
+        setCount((prev) => prev + 1)
+    }, []);
+
+
+
+    return(<div style={{padding: 20}}>
+        <h2>useCallback 예제</h2>
+        <p>Count: {count} </p>
+        <button className="p-4 m-4 bg-blue-300" onClick={() => setOther(!other)}>Toggle: {other.toString()}</button>
+        <Child onClick={handleClick}/>
+    </div>)
+}
