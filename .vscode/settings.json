@@ -57,7 +57,5 @@
   // 🔹 기타 확장 관련 설정
   "editorconfig.enable": true,
   "intellicode.completionsEnabled": true,
-  "cSpell.words": [
-    "macbook"
-  ]
+  "cSpell.words": ["macbook"]
 }
