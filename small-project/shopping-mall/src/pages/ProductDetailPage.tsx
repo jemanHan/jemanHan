@@ -4,7 +4,7 @@ import { products } from "../data/products";
 
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const product = products.find((p) => p.id === Number(id));
+  const product = products.find((p) => p.id === String(id));
   const [quantity, setQuantity] = useState(1);
 
   if (!product) return <p>상품을 찾을 수 없습니다.</p>;
@@ -18,13 +18,13 @@ export default function ProductDetailPage() {
       <img
         src={product.image}
         alt={product.name}
-        className="object-contain w-32 h-32 mx-auto"
+        className="object-contain w-32 h-32 mx-auto rounded-lg"
       />
       <h2 className="text-xl font-bold text-center">{product.name}</h2>
       <p className="text-center text-gray-600">
         {product.price.toLocaleString()}원
       </p>
-      <p className="text-sm text-center text-gray-500">지금 구매하세여</p>
+      <p className="text-sm text-center text-gray-500">지금 바로 구매하세여</p>
 
       <div className="flex items-center justify-center gap-4">
         <button

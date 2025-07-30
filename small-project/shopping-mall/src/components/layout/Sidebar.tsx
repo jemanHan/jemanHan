@@ -1,41 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
-  const [showSubmenu, setShowSubmenu] = useState(true);
-
-  const toggleSubmenu = () => setShowSubmenu((prev) => !prev);
-
   return (
     <aside className="w-48 min-h-screen p-4 bg-gray-100">
       <nav className="space-y-2">
         <div className="text-lg font-bold">메뉴</div>
 
         <div>
-          <a href="/"> 홈</a>
+          <Link to="/" className="block hover:underline">
+            홈
+          </Link>
         </div>
         <div>
-          <a href="/cart"> 장바구니</a>
+          <Link to="/cart" className="block hover:underline">
+            장바구니
+          </Link>
         </div>
 
-        <div
-          className="mt-4 font-semibold cursor-pointer"
-          onClick={toggleSubmenu}>
-          상품 {showSubmenu ? "▾" : "▸"}
-        </div>
-
-        {showSubmenu && (
-          <ul className="ml-4 space-y-1">
+        <details className="mt-4">
+          <summary className="font-semibold cursor-pointer">상품</summary>
+          <ul className="mt-1 ml-4 space-y-1">
             <li>
-              <a href="#"> 과일</a>
+              <Link to="/category/fruit" className="block hover:underline">
+                과일
+              </Link>
             </li>
             <li>
-              <a href="#"> 음료</a>
+              <Link to="/category/drink" className="block hover:underline">
+                음료
+              </Link>
             </li>
             <li>
-              <a href="#"> 간식</a>
+              <Link to="/category/snack" className="block hover:underline">
+                간식
+              </Link>
             </li>
           </ul>
-        )}
+        </details>
       </nav>
     </aside>
   );

@@ -15,8 +15,9 @@ export default function ProductItem({ product }: Props) {
         <img
           src={product.image}
           alt={product.name}
-          className="object-contain w-20 h-20 mx-auto"
+          className="object-contain w-20 h-20 mx-auto rounded-lg"
         />
+
         <h2 className="text-sm font-semibold">{product.name}</h2>
         <p className="text-sm text-gray-500">
           {product.price.toLocaleString()}원
