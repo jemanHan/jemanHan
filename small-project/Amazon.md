@@ -19,9 +19,11 @@ AWS Cloud Practitioner 최종 요약 노트 (통합본)
 
 몇 분 만에 전 세계에 배포: 글로벌 리전을 활용해 전 세계 사용자에게 서비스를 제공합니다.
 
-탄력성 (Elasticity): 워크로드의 변화에 따라 필요한 IT 리소스를 동적으로 확보하고 더 이상 필요하지 않을 때 해제하는 클라우드의 능력입니다.
+탄력성 (Elasticity)
 
-수직 및 수평 확장:
+워크로드의 변화에 따라 필요한 IT 리소스를 동적으로 확보하고 더 이상 필요하지 않을 때 해제하는 클라우드의 능력입니다.
+
+수직 및 수평 확장
 
 수직 확장 (Scaling Up): 인스턴스의 사양(CPU, RAM)을 높이는 방식.
 
@@ -30,30 +32,44 @@ AWS Cloud Practitioner 최종 요약 노트 (통합본)
 AWS 글로벌 인프라
 핵심 용어: AWS 인프라는 리전(Region), 가용 영역(Availability Zone), **엣지 로케이션(Edge Location)**으로 구성됩니다.
 
-리전 (Region): AWS 서비스가 위치한 물리적인 지리적 영역 (예: 서울 ap-northeast-2).
+리전 (Region)
 
-⭐ 리전 선택 4가지 기준: 1. 데이터 거버넌스/법률, 2. 고객과의 근접성(지연 시간), 3. 서비스 가용성, 4. 요금.
+AWS 서비스가 위치한 물리적인 지리적 영역 (예: 서울 ap-northeast-2).
 
-가용 영역 (Availability Zone, AZ):
+⭐ 리전 선택 4가지 기준:
+
+데이터 거버넌스/법률
+
+고객과의 근접성(지연 시간)
+
+서비스 가용성
+
+요금
+
+가용 영역 (Availability Zone, AZ)
 
 하나의 리전 내에 존재하는, 물리적으로 분리된 하나 이상의 데이터 센터. (리전은 AZ의 합집합)
 
-고가용성(HA)을 위해 최소 2개 이상의 AZ에 리소스를 배포하는 것이 모범 사례입니다.
+**고가용성(HA)**을 위해 최소 2개 이상의 AZ에 리소스를 배포하는 것이 모범 사례입니다.
 
-엣지 로케이션 (Edge Location):
+엣지 로케이션 (Edge Location)
 
 Amazon CloudFront가 사용하는 전 세계 주요 도시의 CDN 캐시 서버.
 
 사용자와 가까운 곳에 콘텐츠를 캐싱하여 데이터 전송 속도를 높입니다.
 
-AWS 글로벌 엣지 네트워크: 전 세계에 분산된 데이터 센터 네트워크로, **Amazon CloudFront(CDN)**와 **Amazon Route 53(DNS)**가 이 네트워크를 사용하여 빠르고 안정적인 서비스를 제공합니다.
+AWS 글로벌 엣지 네트워크
+
+전 세계에 분산된 데이터 센터 네트워크로, **Amazon CloudFront(CDN)**와 **Amazon Route 53(DNS)**가 이 네트워크를 사용하여 빠르고 안정적인 서비스를 제공합니다.
+
+AWS Local Zones & Wavelength
 
 AWS Local Zones: 리전의 확장 개념으로, 지연 시간에 민감한 애플리케이션을 위해 컴퓨팅, 스토리지 등을 인구 밀집 지역에 더 가깝게 배치합니다.
 
 AWS Wavelength: 5G 네트워크 엣지에 AWS 인프라를 내장하여 모바일 디바이스를 위한 초저지연 애플리케이션을 지원합니다.
 
 프레임워크 및 마이그레이션
-Well-Architected Framework의 6가지 핵심 원칙:
+Well-Architected Framework의 6가지 핵심 원칙
 
 운영 우수성 (Operational Excellence)
 
@@ -67,13 +83,13 @@ Well-Architected Framework의 6가지 핵심 원칙:
 
 지속 가능성 (Sustainability)
 
-Cloud Adoption Framework (CAF)의 6가지 관점:
+Cloud Adoption Framework (CAF)의 6가지 관점
 
 비즈니스 관점: Business, People, Governance
 
 기술 관점: Platform, Security, Operations
 
-⭐ 마이그레이션 전략 7R:
+⭐ 마이그레이션 전략 7R
 
 Retire (폐기): 더 이상 필요 없는 애플리케이션을 제거.
 
@@ -89,7 +105,9 @@ Replatform (리플랫포밍): 핵심 구조는 유지하되 DB를 RDS로 바꾸�
 
 Refactor/Re-architect (리팩터링/재설계): 클라우드 네이티브 기능을 최대한 활용하기 위해 애플리케이션을 클라우드에서 재설계.
 
-TCO (총 소유 비용): 온프레미스 인프라 운영과 AWS 클라우드 사용 비용을 비교 분석하는 재무 평가 도구.
+TCO (총 소유 비용)
+
+온프레미스 인프라 운영과 AWS 클라우드 사용 비용을 비교 분석하는 재무 평가 도구.
 
 도메인 2: 보안 및 규정 준수
 ⭐ 공동 책임 모델
@@ -117,10 +135,10 @@ DDoS 방어 (무료 기본 제공): AWS Shield Standard
 
 보안 모범 사례 검사 자동화: AWS Security Hub
 
-AWS WAF: 웹 애플리케이션 방화벽. (SQL 인젝션 등 웹 공격 차단)
+웹 애플리케이션 방화벽: AWS WAF (SQL 인젝션 등 웹 공격 차단)
 
 액세스 관리
-⭐ AWS IAM (Identity and Access Management):
+⭐ AWS IAM (Identity and Access Management)
 
 루트 사용자: 최초 생성 계정. MFA 설정 필수, 일상 작업에 사용 금지.
 
@@ -140,13 +158,14 @@ AWS Marketplace: 타사 소프트웨어를 검색하고 구매할 수 있는 디
 
 비관리형: 고객이 OS 및 애플리케이션을 직접 관리. (예: EC2)
 
-서비스 범위:
+서비스 범위
 
 가용 영역별 서비스: EC2 인스턴스, EBS 볼륨
 
 리전별 서비스: Amazon S3, Amazon DynamoDB, IAM, EFS
 
-컴퓨팅:
+서비스 카테고리
+컴퓨팅
 
 EC2: 가상 서버.
 
@@ -154,7 +173,7 @@ Lambda: 서버리스 컴퓨팅.
 
 ECS/EKS/Fargate: 컨테이너 서비스.
 
-스토리지:
+스토리지
 
 ⭐ EBS vs. 인스턴스 스토어: EBS는 영구 스토리지, 인스턴스 스토어는 임시 스토리지.
 
@@ -162,7 +181,7 @@ S3: 객체 스토리지.
 
 EFS: Linux용 공유 파일 스토리지.
 
-데이터베이스:
+데이터베이스
 
 RDS: 관계형 데이터베이스(RDB) 관리형 서비스.
 
@@ -172,19 +191,19 @@ DynamoDB: NoSQL 키-값 데이터베이스.
 
 인메모리 DB: MemoryDB for Redis(데이터베이스용), ElastiCache(캐시용).
 
-네트워크:
+네트워크
 
 VPC: 가상 네트워크. (리전 당 기본 5개 생성 가능)
 
 Direct Connect: 전용 사설 네트워크 연결.
 
-하이브리드:
+하이브리드
 
 AWS Outposts: AWS 인프라를 온프레미스에서 사용.
 
 ⭐ AWS Storage Gateway: 온프레미스와 클라우드 스토리지를 연결. (파일/볼륨/테이프 게이트웨이)
 
-메시징:
+메시징
 
 SNS: Push(푸시) 방식 알림 서비스.
 
@@ -194,7 +213,7 @@ SQS: Pull(폴링) 방식 메시지 대기열. (짧은/긴 폴링)
 요금 모델 및 관리
 EC2 요금제: 온디맨드, 예약(RI)/Saving Plans, 스팟, 전용 호스트(라이선스용).
 
-⭐ AWS Organizations:
+⭐ AWS Organizations
 
 통합 결제(Consolidated Billing): 모든 계정의 요금을 단일 청구서로 통합.
 
@@ -205,13 +224,13 @@ AWS Budgets: 예산을 설정하고 초과 시 알림을 받음.
 AWS Cost Explorer: 과거와 현재 비용을 시각화하고 분석함.
 
 지원
-AWS 지원 옵션:
+AWS 지원 옵션
 
 AWS Trusted Advisor: 5가지 영역에서 모범 사례를 점검하고 권장 사항을 제공.
 
 AWS Health Dashboard / Health API: AWS 서비스의 상태 및 예정된 활동에 대한 정보를 제공.
 
-⭐ AWS Support Plan:
+⭐ AWS Support Plan
 
 Developer: 테스트용.
 
@@ -220,3 +239,27 @@ Business: 프로덕션용, 모든 Trusted Advisor 검사 항목 접근 가능.
 Enterprise On-Ramp: 비즈니스 크리티컬용, 공유 TAM 풀에 접근. (3번째 플랜)
 
 Enterprise: 미션 크리티컬용, 전담 TAM(Technical Account Manager) 제공.
+
+🚀 추가 학습 추천 내용
+정리된 내용이 훌륭하지만, 몇 가지 핵심 서비스를 추가로 알아두시면 합격에 큰 도움이 될 것입니다.
+
+1. 모니터링 및 인프라 관리 (매우 중요)
+   Amazon CloudWatch: 거의 모든 AWS 서비스의 지표(Metrics)를 수집하고 로그(Logs)를 모니터링하는 핵심 서비스입니다. Budgets가 비용에 대한 알림이라면, CloudWatch Alarms는 CPU 사용률, 네트워크 트래픽 등 리소스 상태에 대한 알림을 설정합니다. 이 차이를 꼭 기억하세요.
+
+AWS CloudTrail: 계정 내의 모든 API 호출을 기록하는 서비스입니다. **"누가, 언제, 무엇을 했는가?"**를 추적하여 보안 감사 및 문제 해결에 필수적입니다.
+
+AWS CloudFormation: **인프라를 코드로 관리(Infrastructure as Code, IaC)**하는 서비스입니다. 템플릿 파일(JSON/YAML)을 사용하여 EC2, S3, VPC 등 필요한 리소스를 자동으로, 반복적으로 생성하고 관리할 수 있습니다.
+
+2. 보안 강화
+   AWS Shield Advanced: Standard가 기본 제공되는 DDoS 방어라면, Advanced는 유료 서비스로 더 강력한 공격에 대한 24/7 보호 및 AWS DDoS 대응팀(DRT)의 지원을 제공합니다.
+
+AWS Inspector: EC2 인스턴스 및 컨테이너 이미지의 소프트웨어 취약점 및 의도하지 않은 네트워크 노출을 자동으로 평가하는 서비스입니다.
+
+AWS Secrets Manager: 데이터베이스 자격 증명, API 키 등 **보안 암호를 중앙에서 관리하고 자동으로 교체(Rotation)**해주는 서비스입니다. KMS가 '키'를 관리한다면, Secrets Manager는 '비밀 정보' 자체를 관리합니다.
+
+3. 애플리케이션 통합 및 기타
+   Amazon API Gateway: Lambda와 같은 백엔드 서비스로 들어오는 API 요청을 관리, 보호, 모니터링하는 관문(Gateway) 역할을 합니다. 서버리스 애플리케이션의 핵심 구성 요소입니다.
+
+Amazon Lightsail: 월별 고정 요금으로 가상 서버, 스토리지, 데이터베이스, 네트워킹을 가장 쉽게 시작할 수 있도록 패키징한 서비스입니다. 클라우드가 처음인 사용자를 대상으로 하며, EC2보다 훨씬 간단합니다.
+
+AWS Free Tier: AWS가 제공하는 무료 사용량입니다. 12개월 프리 티어, 상시 프리 티어 등 종류가 있으며, 어떤 서비스가 어느 정도 무료로 제공되는지 개념을 이해해두면 좋습니다.
