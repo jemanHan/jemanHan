@@ -1,0 +1,18 @@
+{
+  // 경로 자동완성
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.extensionOnImport": true,
+
+  // require 자동완성 관련
+  "javascript.suggest.autoImports": true,
+  "npm-intellisense.importES6": false,
+  "npm-intellisense.importQuotes": "\"",
+
+  // 코드 포맷팅
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+
+  // jsconfig 기반 모듈 경로 지원
+  "javascript.preferences.importModuleSpecifier": "non-relative"
+}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",           // 최신 JS 기능 인식
+    "module": "commonjs",      // Node.js 환경에 맞춤
+    "baseUrl": ".",            // 현재 폴더를 기준으로 import 경로 설정
+    "paths": {
+      "@views/*": ["views/*"],
+      "@models/*": ["models/*"],
+      "@routes/*": ["routes/*"],
+      "@controllers/*": ["controllers/*"],
+      "@public/*": ["public/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
