@@ -1,55 +1,53 @@
-## 👋 Hello, I'm Jeman!
+## 안녕하세요, 한제만입니다 👋
 
-프론트엔드, 백엔드 개발자 그리고 클라우드 및 소프트웨어 아키텍트를 꿈꾸며 꾸준히 성장하고 있습니다.  
-기술을 배우는 것을 좋아하며, 다양한 도구와 서비스를 실험하고 활용하는 데 관심이 많습니다.
-
----
-
-## 🚀 Tech Stack
-
-### 🧑‍💻 Languages
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-### ⚙️ Frameworks & Runtime
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-
-| 기술       | 수준       | 경험 |
-| ---------- | ---------- | ---- |
-| HTML5 | ⭐⭐⭐⭐⭐ | 년  |
-| CSS3      | ⭐⭐⭐⭐   | 년  |
-| JavaScript      | ⭐⭐⭐⭐   | 년  |
-| React      | ⭐⭐⭐⭐   | 년  |
-| Node.js      | ⭐⭐⭐⭐   | 년  |
----
-
-## 📈 GitHub Stats
-
-<table>
-<tr>
-<td>
-  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=jemanHan&show_icons=true&theme=radical)
-
-</td>
-<td>
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=jemanHan&layout=compact&theme=radical)
-
-</td>
-</tr>
-</table>
+문제를 정의하고, 설계부터 구현·운영까지 연결하는 개발을 지향합니다.
+풀스택 웹 개발과 서비스 구조 설계에 관심이 많고, 새로운 기술을 빠르게 익혀 실제 프로젝트에 적용하는 것을 좋아합니다.
 
 ---
 
-## 🔥 Streak & Visitors
+## Featured Projects
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jemanHan&theme=radical" alt="GitHub Streak" />
-</p>
+### [LMS Platform](https://github.com/jemanHan/lms-platform)
+사내 교육용 LMS 풀스택 웹 서비스
 
-<p align="center">
-  <img src="https://profile-counter.glitch.me/jemanHan/count.svg" alt="Visitor Count" />
-</p>
+- **기술:** React, TypeScript, Vite, NestJS, TypeORM, PostgreSQL, Passport(JWT/Google/Kakao), AWS S3
+- **기능:** RBAC(학생/강사/관리자), OAuth2 로그인, 강의·시험·과제·QnA, 학습 진행률 추적, Admin 통합 관리
+
+### [Essential Tour](https://github.com/jemanHan/essential-tour)
+한국 여행 가이드 및 일정 관리 웹 서비스
+
+- **기술:** React, TypeScript, Vite, Node.js(Fastify), PostgreSQL, Prisma, AWS(Web/WAS 분리)
+- **기능:** 여행지 탐색, 일정 Planner, 좋아요·최근 본 목록, 다국어, REST API
+
+---
+
+## Tech Stack
+
+| 구분 | 사용 경험 |
+|------|-----------|
+| **Frontend** | React, TypeScript, Vite, Tailwind CSS, React Router |
+| **Backend** | Node.js, NestJS, Fastify, REST API |
+| **Database / ORM** | PostgreSQL, Prisma, TypeORM |
+| **Infra / DevOps** | AWS, Nginx, PM2, S3 |
+| **Tools** | Git, GitHub, Postman, VS Code, Notion |
+
+---
+
+## About Me
+
+- 문제를 먼저 정의하고, 구조를 설계한 뒤 구현으로 연결하는 방식을 선호합니다.
+- 요구사항과 서비스 흐름을 함께 보며, 끝까지 완성도 있게 만드는 개발을 지향합니다.
+- 새로운 기술을 빠르게 익혀 실제 프로젝트에 적용하는 데 강점이 있습니다.
+
+---
+
+## Contact
+
+- **Email:** 0523jeman@naver.com
+- **Portfolio:** [Notion Portfolio](https://www.notion.so/a3e30ac3873382f7906201fd96571547?source=copy_link)
+
+---
+
+## GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=jemanHan&show_icons=true&theme=default)
