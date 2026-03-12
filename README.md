@@ -1,6 +1,6 @@
 ## 안녕하세요, 한제만입니다 👋
 
-문제를 정의하고, 설계부터 구현·운영까지 연결하는 개발을 지향합니다.
+문제를 정의하고, 설계부터 구현·운영까지 연결하는 개발을 지향합니다.  
 풀스택 웹 개발과 서비스 구조 설계에 관심이 많고, 새로운 기술을 빠르게 익혀 실제 프로젝트에 적용하는 것을 좋아합니다.
 
 ---
@@ -23,13 +23,11 @@
 
 ## Tech Stack
 
-| 구분 | 사용 경험 |
-|------|-----------|
-| **Frontend** | React, TypeScript, Vite, Tailwind CSS, React Router |
-| **Backend** | Node.js, NestJS, Fastify, REST API |
-| **Database / ORM** | PostgreSQL, Prisma, TypeORM |
-| **Infra / DevOps** | AWS, Nginx, PM2, S3 |
-| **Tools** | Git, GitHub, Postman, VS Code, Notion |
+- **Frontend**: React, TypeScript, Vite, Tailwind CSS, React Router
+- **Backend**: Node.js, NestJS, Fastify, REST API
+- **Database / ORM**: PostgreSQL, Prisma, TypeORM
+- **Infra / DevOps**: AWS, Nginx, PM2, S3
+- **Tools**: Git, GitHub, Postman, VS Code, Notion
 
 ---
 
