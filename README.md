@@ -7,7 +7,17 @@
 
 ## Featured Projects
 
+### [CareerFlow AI](https://github.com/jemanHan/careerflow-ai)
+
+이력서·포트폴리오·채용공고를 한 흐름에서 다루는 **문서 중심 AI 워크플로** MVP입니다. 단발 생성이 아니라 **추출 → 공고 대비 갭·장단점 분석 → 대화형 보완 → 자기소개·경력기술서 초안 → 면접 질문·답변 포인트**까지 단계형 파이프라인으로 연결합니다.
+
+- **역할:** 기획·풀스택·AI 파이프라인 설계
+- **기술:** Next.js(App Router), TypeScript, Tailwind, NestJS, PostgreSQL, Prisma, LangChain, Gemini / OpenAI, Vercel·AWS EC2
+- **핵심:** 단계별 RunnableSequence 체인, `WorkflowRun` 실행 로그, 모델 라우팅(light/quality/premium), 레이트리밋·실행 락, 문서 생성 실패 시 기존 초안 보존
+- **저장소:** [github.com/jemanHan/careerflow-ai](https://github.com/jemanHan/careerflow-ai) — README에 사용 흐름·배포·API 문서 정리
+
 ### [LMS Platform](https://github.com/jemanHan/lms-platform)
+
 사내 교육용 LMS 풀스택 웹 서비스
 
 - **역할:** Full Stack Developer
@@ -15,6 +25,7 @@
 - **기능:** RBAC(학생/강사/관리자), OAuth2 로그인, 강의·시험·과제·QnA, 학습 진행률 추적, Admin 통합 관리
 
 ### [Essential Tour](https://github.com/jemanHan/essential-tour)
+
 한국 여행 가이드 및 일정 관리 웹 서비스
 
 - **역할:** Team Leader / Full Stack Developer / Infra
@@ -25,10 +36,11 @@
 
 ## Tech Stack
 
-- **Frontend**: React, TypeScript, Vite, Tailwind CSS, React Router
+- **Frontend**: React, Next.js, TypeScript, Vite, Tailwind CSS, React Router
 - **Backend**: Node.js, NestJS, Fastify, REST API
+- **AI / Automation**: LangChain, LLM API(Gemini, OpenAI)
 - **Database / ORM**: PostgreSQL, Prisma, TypeORM
-- **Infra / DevOps**: AWS, Nginx, PM2, S3, CloudFront, ALB
+- **Infra / DevOps**: AWS, Nginx, PM2, S3, CloudFront, ALB, Vercel
 - **Tools**: Git, GitHub, Postman, VS Code, Notion, Slack
 
 ---
