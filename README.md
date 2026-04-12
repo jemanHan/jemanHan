@@ -1,65 +1,58 @@
-## 안녕하세요, 한제만입니다
+﻿## 안녕하세요, 한제만입니다
 
-문제를 정의하고, 설계부터 구현·운영까지 연결하는 풀스택 개발자입니다.  
-서비스 구조를 이해하고 기능으로 설계한 뒤 실제 구현까지 책임지는 개발을 지향합니다.
+프로젝트의 핵심을 이해하고, 필요한 기능과 기술을 연결해 끝까지 결과로 만드는 풀스택 엔지니어입니다.  
+PM 경험으로 요구사항과 우선순위를 정리하는 힘을 길렀고, 이후 풀스택 개발을 통해 이를 실제 서비스 구현과 운영 구조로 연결해왔습니다.
+
+단순히 기능을 추가하는 것보다 왜 필요한지부터 이해하고, 협업과 운영까지 함께 보며 완성도 있게 마무리하는 개발을 더 중요하게 생각합니다.
 
 ---
 
 ## Featured Projects
 
 ### [CareerFlow AI](https://github.com/jemanHan/careerflow-ai)
+채용 지원 준비를 위한 문서 중심 AI 워크플로우 서비스
 
-이력서·포트폴리오·채용공고를 한 흐름에서 다루는 **문서 중심 AI 워크플로** MVP입니다. 단발 생성이 아니라 **추출 → 공고 대비 갭·장단점 분석 → 대화형 보완 → 자기소개·경력기술서 초안 → 면접 질문·답변 포인트**까지 단계형 파이프라인으로 연결합니다.
+- 이력서, 포트폴리오, 채용공고를 연결해 `분석 → 보완 → 문서 생성 → 면접 대비`까지 이어지는 단계형 흐름 설계
+- LangChain 기반 체인 분리, structured output, 모델 라우팅, 실행 로그 추적으로 운영 가능한 AI 기능 구현
+- fallback, 실행 락, 레이트 리밋을 적용해 비용과 안정성을 함께 고려
 
-- **역할:** 기획·풀스택·AI 파이프라인 설계
-- **기술:** Next.js(App Router), TypeScript, Tailwind, NestJS, PostgreSQL, Prisma, LangChain, Gemini / OpenAI, Vercel·AWS EC2
-- **핵심:** 단계별 RunnableSequence 체인, `WorkflowRun` 실행 로그, 모델 라우팅(light/quality/premium), 레이트리밋·실행 락, 문서 생성 실패 시 기존 초안 보존
-- **저장소:** [github.com/jemanHan/careerflow-ai](https://github.com/jemanHan/careerflow-ai) — README에 사용 흐름·배포·API 문서 정리
+### [Monstera LMS Web](https://github.com/jemanHan/lms-platform)
+사내 교육용 LMS 풀스택 웹 플랫폼
 
-### [LMS Platform](https://github.com/jemanHan/lms-platform)
-
-사내 교육용 LMS 풀스택 웹 서비스
-
-- **역할:** Full Stack Developer
-- **기술:** React, TypeScript, Vite, NestJS, TypeORM, PostgreSQL, Passport(JWT/Google/Kakao), AWS S3
-- **기능:** RBAC(학생/강사/관리자), OAuth2 로그인, 강의·시험·과제·QnA, 학습 진행률 추적, Admin 통합 관리
+- React / NestJS 기반으로 학생, 강사, 관리자, 서브관리자 역할을 나눈 LMS 구축
+- RBAC, JWT, Google / Kakao OAuth2, 이메일 인증, 학습 진행률 추적 구조 구현
+- 시험 / 과제 / QnA / 관리자 운영 기능까지 포함한 교육 플랫폼 전체 흐름 설계
 
 ### [Essential Tour](https://github.com/jemanHan/essential-tour)
+여행 정보 탐색 및 일정 관리 웹 서비스
 
-한국 여행 가이드 및 일정 관리 웹 서비스
+- React / Fastify 기반으로 여행지 탐색, 일정 Planner, 좋아요, 다국어 지원 기능 구현
+- PostgreSQL / Prisma 기반 데이터 모델과 AWS Web/WAS 분리 배포 구조 설계
+- 외부 API 과다호출 문제를 캐시, 요청 큐, 간격 제한으로 개선해 비용과 안정성 동시 관리
 
-- **역할:** Team Leader / Full Stack Developer / Infra
-- **기술:** React, TypeScript, Vite, Node.js(Fastify), PostgreSQL, Prisma, AWS(Web/WAS 분리)
-- **기능:** 여행지 탐색, 일정 Planner, 좋아요·최근 본 목록, 다국어, REST API
+---
+
+## How I Work
+
+- 요구사항과 프로젝트 목적을 먼저 이해하고, 해결해야 할 문제를 구조화합니다.
+- 필요한 기술은 빠르게 익히고, 실제로 동작하는 결과물까지 책임지고 연결합니다.
+- AI도 단순 보조 도구가 아니라 문제 정의, 구현, 검증, 문서화에 맞게 나눠 활용합니다.
+- 혼자 잘 만드는 것보다 팀이 더 잘 움직일 수 있도록 기준과 맥락을 함께 정리합니다.
 
 ---
 
 ## Tech Stack
 
-- **Frontend**: React, Next.js, TypeScript, Vite, Tailwind CSS, React Router
-- **Backend**: Node.js, NestJS, Fastify, REST API
-- **AI / Automation**: LangChain, LLM API(Gemini, OpenAI)
-- **Database / ORM**: PostgreSQL, Prisma, TypeORM
-- **Infra / DevOps**: AWS, Nginx, PM2, S3, CloudFront, ALB, Vercel
-- **Tools**: Git, GitHub, Postman, VS Code, Notion, Slack
-
----
-
-## About Me
-
-- 문제를 먼저 정의하고, 구조를 설계한 뒤 구현으로 연결하는 방식을 선호합니다.
-- 요구사항과 서비스 흐름을 함께 보며, 기술 구현과 운영 관점까지 고려하는 개발을 지향합니다.
-- 새로운 기술을 빠르게 익혀 실제 프로젝트에 적용하는 데 강점이 있습니다.
+- Frontend: React, TypeScript, Next.js, Vite, Tailwind CSS, React Router
+- Backend: Node.js, NestJS, Fastify, REST API
+- Database / ORM: PostgreSQL, Prisma, TypeORM
+- Infra: AWS, Nginx, PM2, Docker, S3, CloudFront, Load Balancer
+- Tools: Git, GitHub, Notion, VS Code, Cursor, Claude, Google Stitch
 
 ---
 
 ## Contact
 
-- **Email:** 0523jeman@naver.com
-- **Portfolio:** [Notion Portfolio](https://www.notion.so/a3e30ac3873382f7906201fd96571547?source=copy_link)
-
----
-
-## GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=jemanHan&show_icons=true&theme=default)
+- Email: 0523jeman@naver.com
+- GitHub: https://github.com/jemanHan
+- Portfolio: https://bit.ly/jeman98
